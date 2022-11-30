@@ -1,0 +1,16 @@
+D1=0;
+D2=0;
+D3=0;
+D4=0;
+Precio=0;
+editarVars("Descuentos";"Precio;D1;D2;D3;D4");
+Des1=Precio*D1/100;
+Des2=(Precio-Des1)*D2/100;
+Des3=(Precio-Des1-Des2)*D3/100;
+Des4=(Precio-Des1-Des2-Des3)*D4/100;
+TotalDes=Des1+Des2+Des3+Des4;
+DesAcum=TotalDes/Precio*100;
+PrecioFinal=Precio-Des1-Des2-Des3-Des4;
+PrecioFinalAcum=Precio-Precio*DesAcum/100;
+VerVars("Descuentos";"Precio;D1;D2;D3;D4;PrecioFinal;DesAcum;PrecioFinalAcum");
+
